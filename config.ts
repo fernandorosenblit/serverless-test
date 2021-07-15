@@ -1,8 +1,8 @@
 export const config = {
-  name: 'cra-serverless',
+  name: 'serverless-test',
   github: {
-    owner: 'sbstjn',
-    repository: 'cra-serverless',
+    owner: 'fernandorosenblit',
+    repository: 'serverless-test',
   },
   env: { region: 'us-east-1' },
 }
