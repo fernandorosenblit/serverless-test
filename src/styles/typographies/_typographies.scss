@@ -1,0 +1,55 @@
+@mixin haedline_1_typography {
+  font-size: 2.4rem;
+  font-weight: normal;
+  line-height: 32px;
+
+  @media screen and (max-width: map-get($breakpoints, 'small')) { 
+    font-size: 2.2rem;
+    line-height: 28px;
+  }
+}
+
+@mixin haedline_2_typography {
+  font-size: 2.2rem;
+  font-weight: $global-weight-light;
+  line-height: 32px;
+
+  @media screen and (max-width: map-get($breakpoints, 'small')) { 
+    font-size: 1.8rem;
+    line-height: 24px;
+  }
+}
+
+@mixin haedline_3_typography {
+  font-size: 1.8rem;
+  font-weight: $global-weight-light;
+  line-height: 28px;
+}
+
+@mixin body_1_typography {
+  font-size: 1.6rem;
+  font-weight: $global-weight-light;
+  line-height: 24px;
+
+  @media screen and (max-width: map-get($breakpoints, 'small')) { 
+    font-size: 1.4rem;
+    line-height: 20px;
+  }
+}
+
+@mixin body_2_typography {
+  font-size: 1.4rem;
+  font-weight: $global-weight-light;
+  line-height: 22px;
+}
+
+@mixin caption_typography {
+  font-size: 1.2rem;
+  font-weight: $global-weight-light;
+  line-height: 16px;
+
+  @media screen and (max-width: map-get($breakpoints, 'small')) { 
+    font-size: 1.2rem;
+    line-height: 16px;
+  }
+}

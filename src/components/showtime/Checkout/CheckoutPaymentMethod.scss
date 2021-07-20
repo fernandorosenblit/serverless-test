@@ -1,0 +1,26 @@
+.checkout-payment-method {
+  @include flex-center();
+  background-color: $white;
+  border-radius: $small-border-radius;
+  flex-grow: 1;
+  height: 6rem;
+  max-width: 14.55rem;
+  opacity: .6;
+
+  &:not(:last-child) {
+    margin-right: 1.6rem;
+  }
+
+  &--selected {
+    opacity: 1;
+  }
+
+  * {
+    align-self: center;
+
+    span {
+      color: $black;
+      margin-top: .5rem;
+    }
+  }
+}

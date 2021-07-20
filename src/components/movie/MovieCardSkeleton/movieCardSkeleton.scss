@@ -1,0 +1,37 @@
+.movie-card-skeleton {
+  @include flex-center;
+
+  .skeleton {
+    flex: 1;
+    margin: 0 .7rem;
+
+    ratio-container {
+      max-width: 20rem;
+      margin: auto;
+    }
+
+    .placeholder {
+      @include shine();
+      clear: both;
+      margin: auto;
+
+      &.image {
+        height: calc(100% - 1.6rem);
+        width: 100%;
+      }
+
+      &.title {
+        height: 1.6rem;
+        width: 60%;
+      }
+    }
+
+    @include breakpoint(medium) {
+      margin: 0 1.5rem;
+    }
+
+    @include breakpoint(large) {
+      margin: 0 3rem;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.fam-section {
+  @include container();
+
+  padding: 5.6rem 15.2rem;
+
+  &__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+      font-size: 24px;
+      flex-shrink: 0;
+      user-select: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    padding: 3.4rem 8.1rem;
+  }
+
+  @include breakpoint(small down) {
+    padding: 2.2rem;
+  }
+}

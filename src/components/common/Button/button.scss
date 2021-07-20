@@ -1,0 +1,82 @@
+.btn {
+  @include link-color($white);
+
+  background-color: $indigo;
+  border-radius: $small-border-radius;
+  border: 1px solid $indigo;
+  font-weight: 600;
+  height: 3.8rem;
+  padding: .5rem;
+  position: relative;
+
+  @include breakpoint(small) {
+    padding: .5rem 1.5rem;
+  }
+
+  &__icon {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    margin: auto;
+    padding: 0 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    user-select: none;
+
+    &--left {
+      left: 0;
+      right: unset;
+    }
+  }
+
+  &--with-icon {
+    padding: .3rem 3.7rem .3rem .5rem;
+  }
+
+  &--icon-left {
+    padding: .3rem .5rem .3rem 3.7rem;
+  }
+
+  &--primary {
+    @include link-color($black);
+
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    color: $black;
+
+    &.btn--outlined {
+      @include link-color($primary-color);
+
+      background-color: transparent;
+    }
+  }
+
+  &--link {
+    @include link-color($primary-color);
+    background: transparent;
+    border: none;
+    font-size: 1.7rem;
+    font-weight: normal;
+  }
+
+  &--outlined {
+    @include link-color($white);
+    background-color: transparent;
+  }
+
+  &--disabled {
+    background-color: $gray;
+    border-color: $gray;
+    color: $darker-blue;
+
+    &:hover {
+      color: $darker-blue;
+      pointer-events: none;
+    }
+  }
+
+  &.skeleton {
+    @include shine();
+  }
+}

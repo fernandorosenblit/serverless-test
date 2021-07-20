@@ -1,0 +1,18 @@
+
+.fixed-side-bar-container {
+  display: flex;
+  height: calc(100vh - (#{$header-height} + #{$stepper-height}));
+  padding: 2rem;
+  width: 42.3rem;
+  background-color: $swamp;
+  box-shadow: 0px 0px 50px black;
+  // overflow-x: hidden;            TO DO: Showtime side bar overflow is cuasing a crash in safari, we should discuss with the design how to handle it.
+
+  @include breakpoint(large down) {
+    width: 39rem;
+  }
+
+  @include breakpoint(medium down) {
+    width: 26.6rem;
+  }
+}

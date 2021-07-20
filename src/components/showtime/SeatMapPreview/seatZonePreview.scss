@@ -1,0 +1,46 @@
+$available-seats-shadow: 0px 0px 2px 1px $primary-color;
+
+.seat-zone-preview {
+  line-height: 1.5rem;
+  position: relative;
+  width: 5rem;
+
+  &.seat-zone-preview--with-margin {
+    margin-right: 1rem;
+  }
+
+  &__available-seats {
+    @include flex-center;
+    background-color: $darker-blue;
+    border: 1px solid $light-gray;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    bottom: 0;
+    color: $light-gray;
+    font-size: 1.3rem;
+    height: 2.4rem;
+    line-height: 1.8rem;
+    left: 1rem;
+    position: absolute;
+    width: 2.8rem;
+    pointer-events: none;
+
+    &.animate {
+      @include animation(brightenAndFaint, 1s, $iteration-count: 1, $timing-function: ease-in-out, $direction: normal);
+    }
+
+  }
+
+  &__seat-placeholder {
+    margin-right: .2rem;
+  }
+
+  @keyframes brightenAndFaint {
+    100% {
+      -webkit-box-shadow: $available-seats-shadow;
+      box-shadow: $available-seats-shadow;
+      border: 1px solid $primary-color;
+      color: $primary-color;
+    }
+  }
+}

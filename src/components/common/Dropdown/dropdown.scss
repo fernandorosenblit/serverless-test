@@ -1,0 +1,100 @@
+.dropdown-wrapper {
+  height: 3.8rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 43.5rem;
+
+  .react-select {
+    color: $white;
+
+    &__container {
+      background-color: $indigo;
+      border-radius: $small-border-radius;
+      border: none;
+      color: $medium-gray;
+      font-size: 1.5rem;
+      height: 3.8rem;
+      line-height: 1.5;
+      padding: .3rem .5rem;
+      width: 100%;
+      outline: none;
+
+      &.with-icon {
+        padding: .3rem 3.7rem .3rem .5rem;
+
+        &.icon-left {
+          padding: .3rem .5rem .3rem 3.7rem;
+        }
+      }
+    }
+
+    &__control {
+      height: 3.8rem;
+      background: none !important;
+      border: none !important;
+      outline: none !important;
+      -webkit-appearance: none !important;
+      height: 100%;
+      min-height: unset;
+    }
+
+    &__input {
+      color: $white;
+      font-weight: 400;
+
+      #react-select-input {
+        box-shadow: none !important;
+        width: auto !important;
+      }
+    }
+
+    &__value-container {
+      height: 100%;
+      color: $white;
+    }
+
+    &__single-value {
+      color: inherit;
+    }
+
+    &__menu {
+      background-color: $indigo;
+      color: $white;
+      left: 0;
+    }
+
+    &__menu-list {
+      width: 100%;
+    }
+
+    &__option {
+      &--is-selected {
+        font-weight: 600;
+        background: $darker-blue;
+      }
+
+      &:active,
+      &--is-focused {
+        background: $darker-blue;
+      }
+    }
+
+    &__icon {
+      align-items: center;
+      bottom: 0;
+      display: flex;
+      margin: auto;
+      padding: 0 1rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      user-select: none;
+
+      &.icon-left {
+        left: 0;
+        right: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.toggle-menu-header{
+  display: flex;
+  
+  &__title {
+    border-bottom: solid 2px $indigo;
+    color: $medium-gray;
+    flex: 1;
+    padding: 1rem 0;
+
+    &--active {
+      border-bottom-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+}

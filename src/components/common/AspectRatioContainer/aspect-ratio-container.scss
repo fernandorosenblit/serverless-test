@@ -1,0 +1,11 @@
+.aspect-ratio-container {
+  position: relative;
+
+  .aspect-ratio-content {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

@@ -1,0 +1,33 @@
+.ticket {
+  &-selector {
+    padding: $showtime-content-wrapper-padding;
+  }
+
+  &-selected {
+    display: inline-block;
+    margin-bottom: 1.6rem;
+  }
+}
+
+.tickets-breakdown {
+  margin-left: auto;
+  margin-top: 2.4rem;
+  max-width: 40%;
+
+  &__top-section {
+    margin-bottom: .5rem;
+    > span {
+      color: $hit-gray;
+    }
+  }
+
+  &__bottom-section {
+    font-weight: $global-weight-normal;
+  }
+
+  &__top-section,
+  &__bottom-section {
+    display: flex;
+    justify-content: space-between;
+  }
+}

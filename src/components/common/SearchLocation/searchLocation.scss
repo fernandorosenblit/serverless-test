@@ -1,0 +1,22 @@
+.search-location {
+  position: relative;
+
+  &__input {
+    width: auto;
+  }
+
+  &__options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: $indigo;
+    border-radius: $small-border-radius;
+    z-index: $z-dropdown;
+  }
+
+  &__option {
+    padding: 1rem 1.6rem;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,7 @@
+.close-button {
+  @include square-dimensions(20px);
+  @include flex-center();
+  background-color: $medium-gray;;
+  border-radius: 50%;
+  outline: none;
+}

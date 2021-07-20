@@ -1,0 +1,93 @@
+.showtime-content {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 4rem auto 0 auto;
+
+    @include breakpoint(medium only) {
+      max-width: 45.7rem;
+    }
+
+    @include breakpoint(large up) {
+      max-width: 51.7rem;
+    }
+
+    @include breakpoint(xlarge up) {
+      max-width: 62.6rem;
+    }
+
+    &__header-wrapper {
+      @include flex-space-between();
+      position: relative;
+    }
+
+    &__back-button {
+      transform: translateY(-50%);
+      position: absolute;
+      top: 50%;
+      left: -4.5rem;
+
+      @include breakpoint(xlarge up) {
+        left: -8.4rem;
+      }
+    }
+
+    span.showtime-content-container__sub-header {
+      color: $medium-gray;
+    }
+  }
+
+  &-wrapper {
+    flex: 1;
+    margin-top: 2rem;
+    max-height: calc(
+      100vh - #{$header-height} - #{$stepper-height} - #{$showtime-content-wrapper-top-offset}
+    );
+
+    @include breakpoint(large down) {
+      padding: 0;
+    }
+
+    &--with-background {
+      @include breakpoint(xlarge up) {
+        background-color: $showtime-content-background-color;
+        border-radius: 5px;
+      }
+    }
+
+    &__inner {
+      height: calc(
+        100vh - #{$header-height} - #{$stepper-height} - #{$showtime-content-wrapper-top-offset}
+      );
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.showtime-fixed-sidebar {
+  padding: 2.5rem 3.6rem;
+
+  @include breakpoint(medium only landscape) {
+    padding: 2.5rem 2.4rem;
+  }
+
+  @include breakpoint(medium) {
+    padding: 2.5rem 2.7rem;
+  }
+
+  @include breakpoint(large) {
+    padding: 2.5rem 3.6rem;
+  }
+}
+
+.showtime-content--loading {
+  > * {
+    visibility: hidden;
+  }
+
+  height: 100%;
+  padding: 0;
+  @include shine();
+}

@@ -1,0 +1,9 @@
+.seat {
+  @include flex-center();
+  position: absolute;
+  cursor: pointer;
+    
+  .seat-icon {
+    @include square-dimensions(100%);
+  }
+}

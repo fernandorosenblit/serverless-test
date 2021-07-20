@@ -1,0 +1,19 @@
+.timer {
+  width: 6.8rem;
+
+  &--green {
+    color: $success-additional;
+  }
+  &--red {
+    color: $error-aditional;
+  }
+
+  &__dot {
+    margin-right: 0.8rem;
+    fill: $success-additional;
+
+    &--red {
+      fill: $error-aditional;
+    }
+  }
+}

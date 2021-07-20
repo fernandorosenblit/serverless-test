@@ -1,0 +1,18 @@
+.checkbox {
+  svg {
+    margin-right: 1.1rem;
+  }
+
+  [type='checkbox'] + label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2.4rem;
+  }
+
+  input {
+    display: none;
+    pointer-events: none;
+  }
+}

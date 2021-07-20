@@ -1,0 +1,36 @@
+.fam-filters {
+  @include flex-center;
+  position: fixed;
+  right: calc((100% - #{$home-carousel-width}) * 0.5);
+  transition: left 0.5s, right 0.5s ease-in-out;
+  top: 112px;
+  z-index: 9999;
+
+  &.open {
+    right: $navigation-drawer-width;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__wrapper {
+    margin-top: 3.2rem;
+    flex: 1;
+    overflow-y: scroll;
+    @include custom-scrollbar($gray);
+  }
+
+  @include breakpoint(medium down) {
+    display: none;
+  }
+
+  @media screen and (max-width: #{$home-carousel-width}) {
+    border-radius: 50% 0 0 50%;
+    height: 5.4rem;
+    right: 0;
+  }
+}

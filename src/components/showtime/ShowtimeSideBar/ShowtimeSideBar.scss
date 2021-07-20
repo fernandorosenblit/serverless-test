@@ -1,0 +1,118 @@
+.showtime-sidebar {
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .body3 {
+            line-height: 1.8rem;
+        }
+    }
+
+    &__fees,
+    &__total {
+        @include flex-space-between();
+    }
+
+    &__fees {
+        margin-top: 1.6rem;
+    }
+
+    &__total {
+        font-size: 2.2rem;
+        margin-top: .6rem;
+    }
+
+    &__cta {
+        flex-shrink: 0;
+
+        .btn {
+            width: 100%
+        }
+    }
+
+    &__poster {
+        @include flex-center();
+        position: relative;
+
+        img {
+            border-radius: $small-border-radius;
+            max-width: 8rem;
+    
+            @include breakpoint(medium) {
+                max-width: 7rem;
+            }
+    
+            @include breakpoint(large) {
+                max-width: 8.3rem;
+            }
+        }
+
+        .play-button-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include square-dimensions(3.5rem);
+        }
+
+        @include breakpoint(medium only portrait){ 
+            display: none;   
+        }
+    }
+
+    &__movie {
+        &-details {
+            flex-shrink: 0;
+            margin-left: 3.2rem;
+    
+            @include breakpoint(medium only) {
+                margin-left: 2.3rem;
+            }
+    
+            @include breakpoint(medium only portrait){ 
+                margin-left: 0;   
+            }
+    
+            .btn {
+                height: 3.2rem;
+                margin-top: 1.2rem;
+                font-size: 1.4rem;
+    
+                &:first-of-type {
+                    margin-left: 0;
+                }
+    
+                @include breakpoint(large) {
+                    margin-left: 1.2rem;
+                }
+            }
+        }
+    
+        &-name {
+            font-weight: 600;
+            line-height: 2.2rem;
+            margin-bottom: 1.4rem;
+    
+            @include breakpoint(medium) {
+                font-size: 2.2rem;
+                font-weight: 700;
+                line-height: 2.8rem;
+                letter-spacing: 0.0035em;
+            }
+        }
+    
+        &-rating {
+            margin-right: 1.2rem;
+        }
+    
+        &-runtime {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+            letter-spacing: -0.0008em;
+        }
+    }
+
+
+}

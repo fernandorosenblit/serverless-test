@@ -1,0 +1,78 @@
+.match {
+  @include flex-center;
+  align-items: flex-start;
+  border-bottom: 1.5px solid $indigo;
+  cursor: pointer;
+  max-height: 11.2rem;
+  padding: 1rem 0;
+  position: relative;
+
+  &:hover {
+    background: $indigo;
+
+    &.location {
+      .data > .update-location {
+        display: flex;
+      }
+    }
+  }
+
+  &:first-of-type {
+    margin-top: .2rem;
+  }
+
+  &:last-of-type {
+    border: none;
+  }
+
+  .poster {
+    height: 9.2rem;
+    margin-left: .5rem;
+    width: 6.4rem;
+  }
+
+  .data {
+    display: flex;
+    flex: 1; 
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 1.6rem;
+
+    .specs {
+      .rating {
+        margin-right: 1rem;
+
+        img { max-height: 1.5rem; }
+      }
+
+      .additional-info {
+        color: $medium-gray;
+        font-size: 1.2rem;
+        font-weight: $global-weight-light;
+      }
+    }
+  }
+
+  &.location {
+    .data {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+
+      h4 { margin: 0; }
+
+      .update-location {
+        display: none;
+        margin-right: 1rem;
+        align-items: center;
+
+        span {
+         font-size: 1.2rem;
+         color: $medium-gray 
+        }
+
+        svg { margin-left: 1rem; }
+      }
+    }
+  }
+}

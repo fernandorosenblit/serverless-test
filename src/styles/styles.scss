@@ -1,0 +1,152 @@
+@import './fonts/fonts';
+@import 'variables';
+@import '~rootstrap-ui/dist/styles/scss/index';
+@import '~loaders.css/src/animations/ball-scale-multiple';
+
+@import 'settings';
+@import 'common/constants';
+@import 'common/mixins';
+@import 'common/global';
+@import 'typographies/typographies';
+
+@import '../components/**/*.scss';
+@import '../hooks/styledHooks/**/*.scss';
+
+html {
+  height: 100%;
+  font-size: 10px;
+}
+
+body {
+  @include custom-scrollbar($indigo);
+  background-color: $black;
+  font-family: 'Inter Variable', 'Open Sans', sans-serif, Arial, Helvetica;
+  font-size: 160%;
+  color: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  font-weight: 400;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.no-gutters {
+  margin: 0;
+}
+
+.loading-wrapper {
+  @include flex-center();
+
+  height: 5rem;
+  width: 5rem;
+
+  // These two classes are required by react-loaders
+  .loader-hidden {
+    display: none;
+  }
+
+  .loader-active {
+    display: block;
+  }
+}
+
+h1 {
+  font-size: 2.4rem;
+
+  @include breakpoint(medium down) {
+    font-size: 2.2rem;
+  }
+}
+
+h2 {
+  font-size: 2.2rem;
+
+  @include breakpoint(medium down) {
+    font-size: 1.8rem;
+  }
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+.caption {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.0035em;
+  color: $primary-color;
+
+  &__secondary {
+    color: $medium-gray;
+  }
+}
+
+.caption-two {
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.0007em;
+  color: $medium-gray;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
+
+.body1 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.body2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.body3 {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+
+.body1,
+.body2,
+.body3 {
+  color: $white;
+  letter-spacing: 0.0035em;
+}
+
+.subtitle {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.0041em;
+  color: $white;
+  
+  @include breakpoint(medium down) {
+    font-size: 1.8rem;
+  }
+}

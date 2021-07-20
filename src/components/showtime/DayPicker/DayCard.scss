@@ -1,0 +1,22 @@
+.day-card {
+    @include flex-center(column);
+
+    background-color: $darker-blue;
+    border-radius: 4px;
+    border: 1px solid $gray;
+    margin: auto;
+    padding: .8rem;
+    width: 6rem;
+
+		.h2 {
+			margin-bottom: 0;
+		}
+
+    &:hover,
+    &--selected {
+        background-color: $black;
+        border: 2px solid $primary-color;
+        cursor: pointer;
+        padding: .7rem;
+    }
+}

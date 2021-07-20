@@ -1,0 +1,61 @@
+.checkout-input {
+  display: flex;
+  margin-bottom: 2.4rem;
+
+  @include breakpoint(small down) {
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  > * {
+    margin: auto;
+    text-align: center;
+
+    @include breakpoint(small down) {
+      margin: unset;
+    }
+  }
+
+  &__label {
+    font-weight: $global-weight-light;
+    min-width: 12.5rem;
+    text-align: left;
+
+    &--mandatory {
+      &:before {
+        color: $error;
+        content: "*";
+      }
+    }
+  }
+
+  &__wrapper {
+    border: 1px solid $medium-gray;
+    box-sizing: border-box;
+    border-radius: $small-border-radius;
+    flex-grow: 1;
+    height: 4rem;
+    padding: 1rem;
+
+    &--active {
+      border-color: $primary-color;
+    }
+
+    &--error {
+      border-color: $error;
+    }
+    
+    
+    &--small {
+      width: 12.9rem;
+      
+      @include breakpoint(small down) {
+        width: unset;
+      }
+    }
+
+    @include breakpoint(small down) {
+      margin-top: .5rem;
+    }
+  }
+}

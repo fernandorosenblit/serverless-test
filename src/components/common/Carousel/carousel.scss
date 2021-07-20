@@ -1,0 +1,62 @@
+.slick-slider {
+  position: relative;
+
+  &.lower-dots {
+    .slick-dots {
+      bottom: -2.2rem;
+      margin-top: 1rem;
+
+      @include breakpoint(small down) {
+        margin-right: 2.2rem;
+      }
+    }
+  }
+
+  .slick-list {
+    overflow-x: hidden;
+
+    .slick-track {
+      align-items: center !important;
+      display: flex !important;
+      touch-action: pan-y;
+      justify-content: center;
+    }
+  }
+
+  .slick-dots {
+    align-items: flex-end;
+    bottom: .4rem;
+    display: flex !important;
+    justify-content: center;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    right: 0;
+
+    @include breakpoint(large) {
+      bottom: 1.4rem;
+    }
+
+    li {
+      display: flex;
+
+      .slick-custom-dot {
+        cursor: pointer;
+        display: block;
+        padding: .5rem .5rem;
+
+        .slick-custom-line {
+          background: $primary-color;
+          display: block;
+          height: 1px;
+          width: 2rem;
+        }
+      }
+
+      &.slick-active .slick-custom-dot .slick-custom-line {
+        height: 2px;
+      }
+    }
+  }
+}

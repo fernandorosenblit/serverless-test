@@ -1,0 +1,47 @@
+.results-container {
+  background: $darker-blue;
+  border-radius: .4rem;
+  margin-top: 4.8rem;
+  max-width: 64.4rem;
+  padding: 1.3rem .8rem;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+
+  &.mobile {
+    background: $black;
+    border-radius: 0;
+    height: calc(100vh - 11.4rem);
+    left: 0;
+    width: 100vw;
+  }
+
+  .tabs-container { 
+    border: 0;
+    margin: 0;
+  }
+
+  .results-list {
+    @include custom-scrollbar($indigo);
+    margin-top: .2rem;
+    max-height: 50rem;
+    overflow-y: scroll;
+
+    .empty-state {
+      margin: 2.4rem;
+
+      span {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: $global-weight-light;
+        line-height: 2.2rem;
+
+        &.title {
+          font-weight: $global-weight-normal;
+          margin-bottom: .8rem;
+        }
+      }
+    }
+  }
+}

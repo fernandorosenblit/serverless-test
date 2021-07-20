@@ -1,0 +1,7 @@
+.read-more-button {
+  @include caption_typography();
+  color: $medium-gray;
+  cursor: pointer;
+  font-weight: $global-weight-normal;
+  outline: none;
+}

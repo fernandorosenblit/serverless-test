@@ -1,0 +1,40 @@
+.fade-label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__upcoming-value {
+    opacity: 0;
+    position: absolute;
+    top: 20px;
+  }
+  
+  .fade-out-label {
+    @include animation(fadeOutLabel, 1.5s, $timing-function: ease, $iteration-count: 1, $direction: normal, $fill-mode: forwards);
+  }
+
+  .fade-in-label {
+    @include animation(fadeInLabel, .5s, $timing-function: ease, $iteration-count: 1, $direction: normal, $fill-mode: forwards);
+  }
+
+  @keyframes fadeOutLabel {
+    33% {
+      transform: translateY(-20px);
+      opacity: 0;
+      position: absolute;
+    }
+    100% { 
+      transform: translateY(40px);
+      opacity: 0;
+      position: absolute;
+    }
+  }
+
+  @keyframes fadeInLabel {
+    100% { 
+      transform: translateY(-20px);
+      opacity: 1;
+      position: relative;
+    }
+  }
+}

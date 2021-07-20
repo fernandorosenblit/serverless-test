@@ -1,0 +1,10 @@
+.showtime-menu-panel {
+  @include custom-scrollbar($gray);
+  overflow: scroll;
+  padding-right: 2.2rem;
+
+  &-header.body2 {
+    color: $hit-gray;
+    margin-bottom: 1rem;
+  }
+}

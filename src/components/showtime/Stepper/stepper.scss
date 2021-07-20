@@ -1,0 +1,46 @@
+
+.stepper {
+  @include gradient(90deg, $gradient-gold);
+  display: flex;
+  height: $stepper-height;
+  position: relative;
+  width: 100%;
+
+  &__option {
+    transition: flex-grow 2s, width 2s;
+    overflow: hidden;
+    width: 10rem;
+
+    &--hidden {
+      flex: unset;
+      width: 0;
+    }
+
+    &-label {
+      @include body_1_typography();
+      color: $yukon-gold;
+      font-weight: $global-weight-normal;
+      padding: 0 1rem;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    @include flex-center();
+    flex-grow: 1;
+
+    &--step-done {
+      background-color: $primary-color;
+    }
+  
+    &--current-step {
+      @include clipPath(polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%));
+      background-color: $primary-color;
+    }
+
+    &--step-done, &--current-step {
+      .stepper__option-label {
+        color: $black;
+      }
+    }
+  }
+}

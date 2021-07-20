@@ -1,0 +1,131 @@
+.location-dropdown-wrapper {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  transition: width 1s;
+  width: 16rem;
+
+  &.location-dropdown-wrapper--animate {
+    width: 38.4rem !important;
+
+    @include breakpoint(large down) { 
+      width: 21.5rem !important;
+    }
+  }
+
+  > svg {
+    overflow: visible;
+  }
+
+  input {
+    box-shadow: none !important;
+    color: $white !important;
+    font-size: 1.5rem !important;
+    line-height: 20px !important;
+    margin: auto;
+    outline: none !important;
+  }
+
+}
+
+.location-dropdown-container {
+  flex-grow: 1;
+}
+
+.location-dropdown {
+
+  &__control {
+    background-color: transparent !important;
+    border: none !important;
+
+    &.location-dropdown__control--is-focused {
+      box-shadow:  0 0 0 1px $primary-color !important;
+    }
+
+  }
+
+  &__menu {
+    background-color: $darker-blue !important;
+  }
+
+  &__placeholder,
+  &__single-value {
+    color: $white !important;
+  }
+
+  &__option {
+    border-bottom: solid 1px $indigo;
+    cursor: pointer !important;
+    font-size: 1.5rem;
+    line-height: 20px;
+    padding: 1rem !important;
+
+    &--is-selected {
+      background-color: $black !important;
+      font-weight: $global-weight-normal;
+    }
+
+    &:active,
+    &--is-focused {
+      background-color: $black !important;
+    }
+  }
+}
+
+.location-dropdown-menu-list {
+
+  &__header {
+    color: $medium-gray;
+    display: inline-block;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    padding: 1rem;
+  }
+
+  &__separator {
+    border-top: 1px solid $gray;
+    margin: 0 1rem;
+  }
+
+  &__btn-wrapper {
+    padding: 1rem 2rem;
+  }
+}
+
+.current-location-button {
+  align-items: center;
+  border: solid 1px $primary-color;
+  border-radius: $small-border-radius;
+  color: $primary-color;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.7rem;
+  font-weight: $global-weight-normal;
+  height: 4rem;
+  justify-content: center;
+  line-height: 2.5rem;
+  margin: 1rem auto;
+  width: 100%;
+
+  @include breakpoint(large down) { 
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    > svg {
+      display: none;
+    }
+  }
+
+  &:hover {
+    opacity: .6;
+  }
+
+  > svg {
+    margin-right: 1rem;
+    overflow: visible;
+  }
+}
+
+.location-dropdown-icon {
+  margin-right: 1rem;
+}

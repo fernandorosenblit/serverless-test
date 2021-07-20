@@ -1,0 +1,54 @@
+.primary-modal {
+  @include modal-content();
+  background-color: $darker-blue;
+  border: none;
+  height: fit-content;
+  margin: auto;
+  text-align: center;
+  width: 42.4rem;
+  padding: 2rem 2rem 2rem 2rem;
+
+  &--with-icon {
+    padding-top: 4rem;
+
+    .primary-modal__title {
+      margin-top: 0.6rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: $global-weight-normal;
+    margin-top: 4rem;
+  }
+
+  &__description {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin: 1.2rem auto 3.2rem;
+  }
+
+  &__btn-wrapper {
+    display: flex;
+
+    > button {
+      width: 100%;
+    }
+  }
+
+  &__left-btn {
+    margin-right: 1rem;
+  }
+
+  &__close-btn {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+  }
+}
+
+.primary-modal-overlay {
+  @include modal-overlay();
+  background-color: $modal-overlay-color;
+  z-index: $z-overlay;
+}

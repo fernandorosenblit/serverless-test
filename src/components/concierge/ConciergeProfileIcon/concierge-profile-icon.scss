@@ -1,0 +1,12 @@
+.concierge-profile-icon {
+  @include flex-center(column);
+
+  flex: 1;
+  justify-content: flex-start;
+  padding: 0 1rem;
+
+  .icon-text {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}

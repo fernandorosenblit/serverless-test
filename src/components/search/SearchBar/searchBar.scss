@@ -1,0 +1,54 @@
+.search-bar-container {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  position: relative;
+  width: 100%;
+
+  .input-wrapper {
+    max-width: 64.4rem;
+    width: 100%; 
+
+    &.animate {
+      animation: expand .5s;
+      
+      @keyframes expand {
+        from { width: 3rem; }
+        to { width: 100% };
+      }  
+    }
+    
+    &.lose-focus {
+      animation: contract .5s;
+
+      @keyframes contract {
+        from { width: 100%; }
+        to { width: 3rem };
+      }
+      
+      .clear-search, .results-container { display: none; }
+    }
+
+    &.mobile {
+      margin: 0 1.6rem;
+      max-width: unset;
+
+      .input {
+        background: $indigo;
+        border: none;
+      }
+
+     .input-icon.icon-left { left: unset; } 
+     .input-icon.icon-right { right: unset; }
+    } 
+  }
+
+  .input {
+    border-radius: 4px;
+    border: 1px solid $primary-color;
+    background: $black;
+    outline: none;
+    right: 0;
+    width: 100%;
+  }
+}

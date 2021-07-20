@@ -1,0 +1,33 @@
+.day-picker {
+    margin: 0 3rem;
+
+    &__arrow {
+        top: 30%;
+
+        &--right {
+            right: -3rem;
+        }
+
+        &--left.arrow {
+            left: -3rem !important;
+        }
+    }
+
+    &__header {
+        margin-bottom: 2.1rem;
+        @include flex-center();
+        justify-content: flex-start;
+
+        .subtitle {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(medium down) {
+            display: none;
+        }
+
+        &-icon {
+            margin-left: 1.2rem;
+        }
+    }
+}

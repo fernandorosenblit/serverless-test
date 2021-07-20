@@ -7,6 +7,7 @@
     "outDir": ".server",
     "strict": true,
     "jsx": "react",
+    "allowJs": true,
     "strictNullChecks": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -19,7 +20,28 @@
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
 
-    "typeRoots": ["./node_modules/@types"]
+    "typeRoots": ["./node_modules/@types"],
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*"],
+      "httpClient/*": ["src/httpClient/*"],
+      "components/*": ["src/components/*"],
+      "assets/*": ["src/assets/*"],
+      "middleware/*": ["src/middleware/*"],
+      "constants/*": ["src/constants/*"],
+      "cypressConstants": ["../cypress/support/constants"],
+      "fixtures": ["../cypress/fixtures"],
+      "hooks/*": ["src/hooks/*"],
+      "locales/*": ["src/locales/*"],
+      "pages/*": ["src/pages/*"],
+      "state/*": ["src/state/*"],
+      "reusableTests": ["../cypress/support/reusableTests"],
+      "selectors/*": ["src/selectors/*"],
+      "services/*": ["src/services/*"],
+      "stubs": ["../cypress/stubs"],
+      "styles/*": ["src/styles/*"],
+      "utils/*": ["src/utils/*"]
+    }
   },
   "include": ["server"],
   "exclude": ["cdk.out", "aws", "public"]

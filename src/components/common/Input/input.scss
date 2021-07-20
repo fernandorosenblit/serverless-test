@@ -1,0 +1,53 @@
+.input-wrapper {
+  height: 3.8rem;
+  position: relative;
+  width: 43.5rem;
+
+  .input {
+    background-color: $indigo;
+    border-radius: $small-border-radius;
+    border: none;
+    color: $medium-gray;
+    font-size: 1.5rem;
+    height: 3.8rem;
+    line-height: 1.5;
+    padding: .3rem .5rem;
+    width: 100%;
+
+    &.with-icon {
+      padding: .3rem 3.7rem .3rem .5rem;
+
+      &.icon-left {
+        padding: .3rem .5rem .3rem 3.7rem;
+      }
+    }
+  }
+
+  .input-icon {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    margin: auto;
+    padding: 0 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    user-select: none;
+
+    &.icon-left {
+      left: 0;
+      right: unset;
+    }
+  }
+
+  &.errors .input {
+    border: 1px solid $error;
+  }
+
+  .errors {
+    color: $error;
+    font-size: .9rem;
+    line-height: .9;
+    padding-left: .1rem;
+  }
+}

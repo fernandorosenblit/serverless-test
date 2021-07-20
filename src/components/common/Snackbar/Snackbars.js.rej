@@ -1,0 +1,16 @@
+diff a/src/components/common/Snackbar/Snackbars.js b/src/components/common/Snackbar/Snackbars.js	(rejected hunks)
+@@ -6,10 +6,4 @@ const Snackbars = () => {
+-  const { isOpen, snackbars } = useSelector(
+-    ({
+-      ui: {
+-        snackbar: { isOpen, snackbars }
+-      }
+-    }) => ({
+-      isOpen,
+-      snackbars
+-    })
+-  );
++  const { isOpen, snackbars } = useSelector(({ ui: { snackbar: { isOpen, snackbars } } }) => ({
++    isOpen,
++    snackbars
++  }));

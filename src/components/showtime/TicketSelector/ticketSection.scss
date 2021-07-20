@@ -1,0 +1,29 @@
+.ticket-section {
+  border-bottom: 1px solid $pale-sky;
+  margin-top: .8rem;
+
+  &__header {
+    font-weight: $global-weight-normal;
+  }
+
+  &__content {
+    display: flex;
+    margin-top: 1.6rem;
+    padding-bottom: 1.2rem;
+  }
+
+  &__counter {
+    flex: 1.5
+  }
+
+  &__labels-section {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+
+    > span {
+      color: $light-gray;
+    }
+  }
+}

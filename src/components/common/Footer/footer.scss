@@ -1,0 +1,84 @@
+.footer {
+  @include flex-center(column);
+  background: $darker-blue;
+  margin-top: 2.3rem;
+  padding: 4.9rem 2rem 3.2rem;
+  width: 100%;
+
+  .container {
+    @include container;
+    @include flex-center;
+    justify-content: space-between;
+    padding: 0;
+
+    .navigation-copyright {
+      @include flex-center(column-reverse);
+  
+      @include breakpoint(small) {
+        margin: 1.5rem 0;
+      }
+  
+      @include breakpoint(medium) {
+        flex-direction: column;
+      }
+    }
+  
+    .social {
+      a { margin: .5rem 1rem; }
+
+      @include breakpoint(small down) {
+        margin-top: 1.8rem;
+      }
+    }
+  
+    .navigation {
+      @include show-for(small);
+  
+      a {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+      }
+    }
+
+    @include breakpoint(large down) {
+      padding: 0 4.4rem
+    }
+  
+    @include breakpoint(small down) {
+      flex-direction: column;
+      padding: 3.2rem 1rem 0;
+    }
+  }
+
+  .separator {
+    height: 1.5px;
+    margin-top: 3rem;
+    margin-bottom: 1.6rem;
+    max-width: $global-width;
+    width: 100%;
+
+    @include breakpoint(large down) {
+      margin: 3rem 2.4rem 1.6rem;
+      width: calc(100% - 4.8rem);
+    }
+
+    @include breakpoint(small down) {
+      margin-top: 2rem;
+    }
+  }
+
+  .copyright {
+    color: $medium-gray;
+    font-size: 1.4rem;
+    margin-left: 6rem;
+
+    @include breakpoint(small down) {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+  }
+
+  @include breakpoint(small down) {
+    padding-top: 0;
+  }
+}

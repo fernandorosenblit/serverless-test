@@ -1,0 +1,28 @@
+.icon-button {
+  background: $primary-color;
+  width: 4.9rem;
+  border-width: 0.2rem;
+  border-radius: 50% 0 0 50%;
+  height: 4.9rem;
+
+  &__rounded {
+    border-radius: 50%;
+  }
+
+  &__inverted {
+    background: $black;
+    border: 2px solid $primary-color;
+
+    svg {
+      fill: $primary-color !important;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    fill: $black;
+  }
+}

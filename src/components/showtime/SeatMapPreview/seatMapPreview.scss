@@ -1,0 +1,46 @@
+.seat-map-preview {
+  background-color: $black;
+  border: 1px solid $indigo;
+  border-radius: $small-border-radius;
+  margin: 4.8rem auto auto;
+  overflow: hidden;
+  height: 17.3rem;
+  width: 26.1rem;
+
+  @include breakpoint(medium down) {
+    width: 22rem;
+  }
+
+  .seat-map-preview__title {
+    color: $white;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__screen-image {
+    position: absolute;
+    top: -.5rem;
+  }
+
+  &__screen-zone {
+    @include gradient(0deg, $gradient-seat-map-preview);
+    margin-top: 2rem;
+    position: relative;
+  }
+
+  &__seats-zone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding: 0 2rem;
+    width: 22rem;
+  }
+
+  &__separator {
+    border: 1px solid $indigo;
+    margin: .3rem 0;
+    width: 100%;
+  }
+}

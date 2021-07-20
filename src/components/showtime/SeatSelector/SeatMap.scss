@@ -1,0 +1,84 @@
+.seat-map {
+  @include square-dimensions(100%);
+  position: relative;
+  padding-bottom: 6.2rem;
+
+  &__inner {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__zoom {
+    &-container {
+      height: 100%;
+    }
+
+    &-outer {
+      @include square-dimensions(100%);
+      overflow: hidden;
+    }
+  }
+  
+  &__interactive {
+    @include square-dimensions(100%);
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__screen {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__seats {
+    margin-top: 9rem;
+    flex: 1;
+    position: relative;
+  }
+
+  &__controlls {
+    position: absolute;
+    background-color: $indigo;
+    border-radius: $small-border-radius;
+    right: -6.2rem;
+    bottom: 3.6rem;
+
+    @include breakpoint(large) {
+      bottom: 8rem;
+    }
+
+    button {
+      padding: 1.2rem;
+      @include flex-center();
+      @include square-dimensions(4rem);
+    }
+  }
+
+  &__seating-legends {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    row-gap: 2.2rem;
+    column-gap: .2rem;
+  }
+
+  &__seating-legend {
+    @include flex-center();
+    flex: 1 auto;
+
+    .seat-icon {
+      @include square-dimensions(2rem)
+    }
+
+    .caption__secondary {
+      margin-left: 1rem;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.separator {
+  background: $indigo;
+  height: 0.5rem;
+  margin: auto;
+  max-width: rem-calc($home-carousel-width, 10);
+  width: 100%;
+
+  &.container-width {
+    @include container();
+  }
+
+  &.condensed {
+    height: 0.15rem;
+  }
+}

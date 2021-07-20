@@ -1,0 +1,18 @@
+
+.play-button-wrapper {
+  @include flex-center;
+  @include square-dimensions(11rem);
+  background-color: #00131f99;
+  border-radius: 50%;
+  outline: none;
+
+  &:not(:hover) {
+    > svg {
+      opacity: .6;
+    }
+  }
+
+  @media screen and (max-width: map-get($breakpoints, 'small')) { 
+    @include square-dimensions(4.8rem);
+  }
+}

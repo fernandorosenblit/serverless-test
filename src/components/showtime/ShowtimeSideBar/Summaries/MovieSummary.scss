@@ -1,0 +1,52 @@
+.showtime-sidebar__movie {
+    &-details {
+        flex-shrink: 0;
+        margin-left: 3.2rem;
+
+        @include breakpoint(medium only) {
+            margin-left: 2.3rem;
+        }
+
+        @include breakpoint(medium only portrait){ 
+            margin-left: 0;   
+        }
+
+        .btn {
+            height: 3.2rem;
+            margin-top: 1.2rem;
+            margin-left: 1.2rem;
+            &:first-of-type {
+                margin-left: 0;
+            }
+
+        }
+    }
+
+    &-name {
+        font-weight: 600;
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+        margin-bottom: 1.4rem;
+
+        @include breakpoint(medium) {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 2.8rem;
+            letter-spacing: 0.0035em;
+        }
+    }
+
+    &-rating {
+        margin-right: 1.2rem;
+    }
+
+    &-runtime {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        letter-spacing: -0.0008em;
+    }
+
+    &-btn-primary.body3 {
+        color: $black;
+    }
+}

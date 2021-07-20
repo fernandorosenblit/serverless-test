@@ -1,0 +1,12 @@
+.snackbars {
+  position: fixed;
+  bottom: 4rem;
+  left: 16px;
+  right: 16px;
+  z-index: $z-snackbar;
+  display: grid;
+  grid-gap: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  right: unset;
+}

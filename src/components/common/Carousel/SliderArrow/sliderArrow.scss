@@ -1,0 +1,24 @@
+.arrow {
+  cursor: pointer;
+  padding: .5rem;
+  position: absolute;
+  right: -4rem;
+  top: 45%;
+  width: 2rem;
+
+  &.previous {
+    left: -4rem !important;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.slick-disabled {
+    display: none;
+  }
+
+  @include breakpoint(small down) {
+    display: none;
+  }
+}

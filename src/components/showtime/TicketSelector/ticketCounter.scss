@@ -1,0 +1,19 @@
+.ticket-counter {
+  align-items: center;
+  background-color: $indigo;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 17.2rem;
+
+  &__minus-button,
+  &__plus-button {
+    @include flex-center();
+    @include square-dimensions(4rem);
+  }
+
+  &__label {
+    min-width: 2.5rem;
+    text-align: center;
+  }
+}

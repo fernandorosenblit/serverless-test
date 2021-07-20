@@ -1,0 +1,37 @@
+.theater-selector {
+  display: flex;
+  height: $showtime-inner-container-height;
+  padding: $showtime-content-wrapper-padding;
+
+  &__filter {
+    margin: auto .8rem 4.2rem auto;
+    max-width: 16.4rem;
+  }
+
+  &__content {
+    @include custom-scrollbar($gray);
+    overflow: scroll;
+  }
+
+  &__input-wrapper {
+    flex-grow: 1;
+    margin-right: .8rem;
+    width: unset;
+  }
+
+  &__load-more {
+    display: block;
+    margin: 3.2rem auto;
+
+    &--fix-width {
+      width: 28.4rem;
+    }
+  }
+
+  &__update-location-btn {
+
+    > :last-child {
+      color: $primary-color;
+    }
+  }
+}

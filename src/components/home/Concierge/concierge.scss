@@ -1,0 +1,92 @@
+section.concierge {
+  @include container();
+  @include flex-center(column);
+
+  padding: 1.7rem 3rem 9.4rem;
+  position: relative;
+
+  @include breakpoint(medium) {
+    padding: 2.9rem 1rem 8.6rem;
+  }
+
+  @include breakpoint(large) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 3.9rem 0 7.1rem;
+  }
+
+  .concierge-info {
+    display: none;
+
+    @include breakpoint(medium) {
+      @include flex-center(column);
+    }
+
+    .concierge-preview-container {
+      @include flex-center();
+
+      position: relative;
+
+      .concierge-preview-item {
+        position: absolute;
+      }
+
+      .play-trailer-btn {
+        bottom: 2rem;
+        left: 3.5rem;
+        padding: 1rem;
+        position: absolute;
+      }
+    }
+
+    .concierge-learn-more {
+      color: $primary-color;
+    }
+  }
+
+  .concierge-details {
+    margin-top: 2.2rem;
+    max-width: 40rem;
+
+    @include breakpoint(large) {
+      max-width: 46rem;
+      padding: 0 2rem;
+    }
+
+    .concierge-description {
+      text-align: center;
+      margin-bottom: 1.3rem;
+    }
+
+    .concierge-profiles {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .setup-concierge {
+      @include flex-center();
+
+      margin-top: 1rem;
+      padding: .8rem;
+      text-align: center;
+    }
+
+    .login-container {
+      display: none;
+      margin-top: 3.3rem;
+      text-align: center;
+
+      @include breakpoint(large) {
+        display: block;
+      }
+    }
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 1rem;
+    left: auto;
+    right: auto;
+  }
+}

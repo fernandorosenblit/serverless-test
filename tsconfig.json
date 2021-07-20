@@ -1,20 +1,55 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "ES2018",
+    "module": "esnext",
+    "types": ["node", "react"],
+    "lib": ["es2018", "dom"],
+    "outDir": ".server",
+    "strict": true,
     "allowJs": true,
-    "skipLibCheck": true,
+    "strictNullChecks": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+
+    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+
+    "typeRoots": ["./node_modules/@types"],
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*"],
+      "httpClient/*": ["src/httpClient/*"],
+      "components/*": ["src/components/*"],
+      "assets/*": ["src/assets/*"],
+      "middleware/*": ["src/middleware/*"],
+      "constants/*": ["src/constants/*"],
+      "cypressConstants": ["../cypress/support/constants"],
+      "fixtures": ["../cypress/fixtures"],
+      "hooks/*": ["src/hooks/*"],
+      "locales/*": ["src/locales/*"],
+      "pages/*": ["src/pages/*"],
+      "state/*": ["src/state/*"],
+      "reusableTests": ["../cypress/support/reusableTests"],
+      "selectors/*": ["src/selectors/*"],
+      "services/*": ["src/services/*"],
+      "stubs": ["../cypress/stubs"],
+      "styles/*": ["src/styles/*"],
+      "utils/*": ["src/utils/*"]
+    }
   },
-  "exclude": ["cdk.out", "aws", "server"],
-  "include": ["src"]
+  "include": ["server"],
+  "exclude": ["cdk.out", "aws", "public"]
 }

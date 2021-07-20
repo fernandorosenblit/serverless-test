@@ -1,0 +1,12 @@
+.featured {
+  margin: auto;
+  max-width: rem-calc($home-carousel-width, 10);
+
+  .slick-list {
+    overflow: hidden;
+  }
+}
+
+.carousel-animation {
+  transition: transform .2s ease-out;
+}

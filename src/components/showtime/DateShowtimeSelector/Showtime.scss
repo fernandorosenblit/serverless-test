@@ -1,0 +1,48 @@
+.showtime {
+  background-color: $darker-blue;
+  border-radius: $small-border-radius;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  padding: .75rem 1.4rem;
+
+  &__format {
+    margin-left: 1rem;
+  }
+
+  .showtime__format,
+  .showtime__seating-state {
+    color: $medium-gray;
+  }
+
+  .showtime__availability-content {
+    align-items: flex-end;
+    float: right;
+    width: 9rem;
+  }
+
+  .showtime__availability-label {
+    color: $jaffa;
+
+    &--disabled {
+      color: $medium-gray;
+    }
+  }
+
+  &__time, &__availability {
+    font-weight: $global-weight-normal;
+  }
+
+  &--selected.showtime {
+    background-color: $black;
+    border: solid 1px $primary-color;
+  }
+
+  &--disabled.showtime {
+    pointer-events: none;
+
+    *:not(.showtime__availability-label) {
+      color: $gray;
+    }
+  }
+
+}

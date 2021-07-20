@@ -1,0 +1,39 @@
+.showtime-side-bar-summary {
+    padding: 1.6rem 0;
+    border-bottom: 1px solid $gray;
+
+    &__details {
+        @include flex-space-between();
+    }
+
+    &__logo {
+        flex-grow: 1;
+        margin-right: 2.4rem;
+    }
+
+    &__content {
+        margin-top: .6rem;
+        
+        &.light-copy {            
+            span {
+                color: $medium-gray;
+            }
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            @include breakpoint(large up){ 
+                @include flex-space-between();
+            }
+        }
+    }
+
+    .btn {
+        padding: 0;
+        color: $primary-color;
+        height: unset;
+    }
+}

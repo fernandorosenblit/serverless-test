@@ -1,0 +1,196 @@
+@mixin gradient($direction, $gradient) {
+  background: -webkit-linear-gradient($direction, $gradient);
+  background: -moz-linear-gradient($direction, $gradient);
+  background: -o-linear-gradient($direction, $gradient);
+  background: linear-gradient($direction, $gradient);
+}
+
+@mixin clipPath($path) {
+  -webkit-clip-path: $path;
+  clip-path: $path;
+}
+
+@mixin flex-center($flex-direction: row) {
+  align-items: center;
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: center;
+}
+
+@mixin flex-space-between($flex-direction: row) {
+  align-items: center;
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: space-between;
+}
+
+@mixin container() {
+  max-width: $global-width;
+  margin: auto;
+}
+
+@mixin square-dimensions($dimension) {
+  height: $dimension;
+  width: $dimension;
+}
+
+@mixin set-equal-insets($inset) {
+  top: $inset;
+  bottom: $inset;
+  left: $inset;
+  right: $inset;
+}
+
+@mixin link-color($color) {
+  color: $color;
+
+  &:link {
+    color: $color;
+  }
+
+  &:active {
+    color: $color;
+  }
+
+  &:visited {
+    color: $color;
+  }
+
+  &:hover {
+    color: $color;
+  }
+}
+
+@mixin color-shift($name, $color1, $color2, $properties: [background]) {
+  @-moz-keyframes #{$name} {
+    0% {
+      @each $property in $properties {
+        #{$property}: $color1;
+      }
+    }
+    100% {
+      @each $property in $properties {
+        #{$property}: $color2;
+      }
+    }
+  }
+  @-webkit-keyframes #{$name} {
+    0% {
+      @each $property in $properties {
+        #{$property}: $color1;
+      }
+    }
+    100% {
+      @each $property in $properties {
+        #{$property}: $color2;
+      }
+    }
+  }
+  @keyframes #{$name} {
+    0% {
+      @each $property in $properties {
+        #{$property}: $color1;
+      }
+    }
+    100% {
+      @each $property in $properties {
+        #{$property}: $color2;
+      }
+    }
+  }
+}
+
+@mixin animation(
+  $animation,
+  $duration,
+  $timing-function: linear,
+  $delay: 0s,
+  $iteration-count: infinite,
+  $direction: alternate-reverse,
+  $fill-mode: none
+) {
+  -webkit-animation-name: $animation;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-timing-function: $timing-function;
+  -webkit-animation-delay: $delay;
+  -webkit-animation-iteration-count: $iteration-count;
+  -webkit-animation-direction: $direction;
+  -webkit-animation-fill-mode: $fill-mode;
+  
+
+  -moz-animation-name: $animation;
+  -moz-animation-duration: $duration;
+  -moz-animation-timing-function: $timing-function;
+  -moz-animation-delay: $delay;
+  -moz-animation-iteration-count: $iteration-count;
+  -moz-animation-direction: $direction;
+  -moz-animation-fill-mode: $fill-mode;
+
+  animation-name: $animation;
+  animation-duration: $duration;
+  animation-timing-function: $timing-function;
+  animation-delay: $delay;
+  animation-iteration-count: $iteration-count;
+  animation-direction: $direction;
+  animation-fill-mode: $fill-mode;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-200%);
+  }
+  30% {
+    // -100% of shine's width (20%) = -shineWidth
+    transform: translateX(-200%);
+  }
+  100% {
+    // 500% of shine's width (20%) = 100% of parentWidth
+    transform: translateX(500%);
+  }
+}
+
+@mixin shine($background: $darker-blue) {
+  background: $background;
+  border-radius: .4rem;
+  border: none;
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    @include animation(shine, 1s, ease-in-out, $direction: forwards);
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, .03) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
+
+@mixin custom-scrollbar($background) {
+  &::-webkit-scrollbar {
+    width: .7em;
+    height: 100%;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+    box-shadow: none;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $background;
+    border-radius: 4px;
+  }
+
+  & {
+    scrollbar-face-color: $background;
+    scrollbar-track-color: transparent;
+  }
+
+}

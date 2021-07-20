@@ -1,0 +1,239 @@
+.movie-detail-modal-content {
+  @include modal-content();
+  @include custom-scrollbar($gray);
+  background-color: $darker-blue;
+  border: 1px solid $darker-blue;
+  max-width: 86.6rem;
+  margin: auto;
+  padding: 0;
+
+  // @include breakpoint(medium down) {
+  @media screen and (max-width: map-get($breakpoints, 'medium')) { 
+    @include set-equal-insets(20px);
+  }
+
+  // @include breakpoint(small down) {
+  @media screen and (max-width: map-get($breakpoints, 'small')) { 
+    @include set-equal-insets(0);
+  }
+}
+
+.movie-detail-modal-overlay {
+  @include modal-overlay();
+  background-color: $modal-overlay-color;
+  z-index: $z-overlay;
+}
+
+.movie-details-modal-container {
+  height: 100%;
+
+  &__close {
+    position: absolute;
+    right: 2.6rem;
+    top: 2.6rem;
+  }
+}
+
+.movie-details-content-wrapper {
+  bottom: 10rem;
+  height: 100%;
+  padding: 0 10% 4rem 10%;
+  position: relative;
+  
+  &--no-trailer {
+    top: 0;
+  }
+
+
+  @include gradient(180deg, $gradient-dark-blue);
+
+  &__separator {
+    border-bottom: 1.5px solid $indigo;
+  }
+
+  > * {
+    padding: 4rem 0;
+  }
+
+  @media screen and (max-width: map-get($breakpoints, 'small')) { 
+    bottom: 8rem;
+    padding: 0 3% 4rem 3%;
+  }
+
+}
+
+.movie-details-trailer-wrapper {
+  position: relative;
+
+  > :last-child {
+    position: absolute;
+    top: 44%;
+    left: 43%;
+  }
+}
+
+.movie-details-main-section {
+  display: flex;
+  
+  &__cover {
+    border-radius: $small-border-radius;
+    height: 16.7rem;
+    filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
+    width: 11.1rem;
+
+    @media screen and (max-width: map-get($breakpoints, 'small')) { 
+      width: 7.4rem;
+      height: 9.6rem;
+    }
+  }
+
+  &__right-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 10;
+    margin-left: 2.4rem;
+
+    @media screen and (max-width: map-get($breakpoints, 'small')) {
+      margin-left: 1.6rem;
+    }
+  }
+
+  &__title-wrapper {
+    align-items: center;
+    display: flex;
+  }
+
+  &__film-title {
+    @include haedline_1_typography;
+    font-weight: $global-weight-normal;
+    margin-left: .8rem;
+
+    @media screen and (max-width: map-get($breakpoints, 'small')) {
+      font-size: 1.8rem;
+      font-weight: $global-weight-normal;
+      line-height: 24px;
+    }
+  }
+
+  &__release-date {
+    @include body_1_typography;
+  }
+
+  &__duration {
+    @include body_2_typography;
+  }
+
+  &__rating {
+    @include body_2_typography;
+    margin-right: 1.6rem;
+  }
+
+  &__button {
+    @include flex-center();
+    border: 1px solid $primary-color;
+    background: transparent;
+    color: $primary-color;
+    margin-top: auto;
+    max-width: 31.8rem;
+    outline: none;
+    
+    &:active {
+      opacity: .6;
+    }
+
+    :first-child {
+      margin-right: .8rem;
+    }
+  }
+}
+
+.movie-details-info-section {
+  display: flex;
+
+  > * {
+    color: $light-gray;
+  }
+
+  &__left-wrapper {
+    width: 11.1rem;
+
+    :nth-child(2) {
+      display: inline-block;
+      margin-bottom: 3.2rem;
+    }
+
+    @media screen and (max-width: map-get($breakpoints, 'small')) { 
+      display: none;
+    }
+  }
+
+  &__right-wrapper {
+    flex: 10;
+    margin-left: 2.4rem;
+
+    > p {
+      margin-bottom: 0;
+    }
+
+    > h3:not(:first-child) {
+      margin-top: 1.8rem;
+    }
+
+    @media screen and (max-width: map-get($breakpoints, 'small')) { 
+      margin: 0;
+    }
+  }
+
+  &__header {
+    @include caption_typography;
+  }
+
+  &__text {
+    @include body_2_typography;
+
+    &--white {
+      color: $white;
+    }
+  }
+}
+
+.movie-details-movies-section {
+
+  &__header {
+    @include haedline_3_typography;
+    font-weight: $global-weight-normal;
+    margin-bottom: 2rem;
+  }
+
+  &__cards-wrapper {
+    display: flex;
+
+    > :not(:first-child) {
+      margin-left: 1.6rem;
+    }
+  }
+
+  @media screen and (max-width: map-get($breakpoints, 'small')) { 
+    display: none;
+  }
+}
+
+.movie-details-movie-card {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+
+  max-height: 189px;
+  max-width: 126px;
+
+  &__image { 
+    border-radius: $small-border-radius;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    @include body_2_typography;
+  }
+}
+

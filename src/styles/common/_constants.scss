@@ -1,0 +1,84 @@
+// Colors
+$primary-color: #eacc80;
+$white: #ffffff;
+$black: #00131f;
+
+$darker-blue: #1b2c38;
+$indigo: #283845;
+$gray: #45535c;
+$hit-gray: #adb5bd;
+$medium-gray: #a2a9ad;
+$light-gray: #d0d4d6;
+$gold: #a58549;
+$yukon-gold: #7e5c05;
+$swamp: #001827;
+$jaffa: #ed8337;
+$pale-sky: #6c7680;
+$error: #ff453a;
+$error-aditional: #eb3b5a;
+$success-additional: #20bf6b;
+
+$gradient-gold: #a5854900, #eacc80ff;
+$gradient-light: #dcdcdc00, #ffffffff;
+$gradient-dark: #1b2c3800, #00131fff;
+$gradient-featured: #000000e0, #ffffff00;
+$gradient-dark-blue: #1b2c3800 0%, #1b2c38b3 4.74%, #1b2c38ff 10%;
+$gradient-seat-map-preview: #1b2c3800 40%, #1b2c38b3 85%, #1b2c38ff 100%;
+$gradient-gold: $gold, $primary-color;
+
+$modal-overlay-color: #00131fb3;
+$showtime-content-background-color: #1b2c3880;
+
+// Widths
+$home-carousel-width: 1700px;
+
+// Height
+$header-height: 8.3rem;
+$stepper-height: 5.5rem;
+$showtime-content-wrapper-top-offset: 9.5rem;
+$showtime-inner-container-height: calc(
+  100vh - #{$header-height} - #{$stepper-height} - #{$showtime-content-wrapper-top-offset}
+);
+
+// Padding
+$showtime-content-wrapper-padding: 2.5rem 4rem 0 4rem;
+
+// Border radius
+$small-border-radius: 4px;
+
+// Z-index
+$z-overlay: 9999;
+$z-dropdown: 999;
+$z-navigation-drawer: 9999;
+$z-snackbar: 99999;
+
+// Breakpoints
+$breakpoints: (
+  xsmall: 0px,
+  small: 480px,
+  medium: 768px,
+  large: 1024px,
+  xlarge: 1200px
+);
+
+:export {
+  primaryColor: $primary-color;
+  white: $white;
+  black: $black;
+  darkerBlue: $darker-blue;
+  indigo: $indigo;
+  gray: $gray;
+  mediumGray: $medium-gray;
+  lightGray: $light-gray;
+  success-additional: $success-additional;
+  error-aditional: $error-aditional;
+  modalOverlayColor: $modal-overlay-color;
+  zOverlay: $z-overlay;
+  error: $error;
+}
+
+@each $key, $value in $breakpoints {
+  :export {
+    #{unquote($key)}: $value;
+  }
+}
