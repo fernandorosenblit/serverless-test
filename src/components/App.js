@@ -2,11 +2,11 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Route, Switch } from 'react-router'
 
-import { Navigation } from 'components/Navigation'
+import { Navigation } from './Navigation'
 
-import { Details } from 'pages/Details'
-import { NotFound } from 'pages/Error'
-import { Home } from 'pages/Home'
+import { Details } from '../pages/Details'
+import { NotFound } from '../pages/Error'
+import { Home } from '../pages/Home'
 
 const App = () => (
   <>

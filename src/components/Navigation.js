@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 import { useLocation, NavLink } from 'react-router-dom'
-import { Footer } from 'components/Footer'
+import { Footer } from './Footer'
 
 export const Navigation = () => {
   const location = useLocation()
