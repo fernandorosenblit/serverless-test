@@ -18,8 +18,29 @@
     "inlineSources": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
-
-    "typeRoots": ["./node_modules/@types"]
+    "allowJs": true,
+    "typeRoots": ["./node_modules/@types"],
+    "baseUrl": "src",
+    "paths": {
+      "*": ["/*"],
+      "httpClient/*": ["httpClient/*"],
+      "components/*": ["components/*"],
+      "assets/*": ["assets/*"],
+      "middleware/*": ["middleware/*"],
+      "constants/*": ["constants/*"],
+      "cypressConstants": ["../cypress/support/constants"],
+      "fixtures": ["../cypress/fixtures"],
+      "hooks/*": ["hooks/*"],
+      "locales/*": ["locales/*"],
+      "pages/*": ["pages/*"],
+      "state/*": ["state/*"],
+      "reusableTests": ["../cypress/support/reusableTests"],
+      "selectors/*": ["selectors/*"],
+      "services/*": ["services/*"],
+      "stubs": ["../cypress/stubs"],
+      "styles/*": ["styles/*"],
+      "utils/*": ["utils/*"]
+    }
   },
   "include": ["server"],
   "exclude": ["cdk.out", "aws", "public"]

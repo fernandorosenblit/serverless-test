@@ -13,7 +13,28 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "baseUrl": "./src",
+    "paths": {
+      "*": ["/*"],
+      "httpClient/*": ["httpClient/*"],
+      "components/*": ["components/*"],
+      "assets/*": ["assets/*"],
+      "middleware/*": ["middleware/*"],
+      "constants/*": ["constants/*"],
+      "cypressConstants": ["../cypress/support/constants"],
+      "fixtures": ["../cypress/fixtures"],
+      "hooks/*": ["hooks/*"],
+      "locales/*": ["locales/*"],
+      "pages/*": ["pages/*"],
+      "state/*": ["state/*"],
+      "reusableTests": ["../cypress/support/reusableTests"],
+      "selectors/*": ["selectors/*"],
+      "services/*": ["services/*"],
+      "stubs": ["../cypress/stubs"],
+      "styles/*": ["styles/*"],
+      "utils/*": ["utils/*"]
+    }
   },
   "exclude": ["cdk.out", "aws", "server"],
   "include": ["src"]

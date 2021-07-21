@@ -2,7 +2,7 @@ import koa from 'koa'
 import http from 'koa-route'
 import serve from 'koa-static'
 
-import App from '../src/App'
+import App from '../src/components/App'
 import { paths } from './config'
 import { render } from './lib/render'
 
